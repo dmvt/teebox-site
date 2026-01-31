@@ -15,9 +15,12 @@
       --surface: #141414;
       --border: #222;
       --text: #e5e5e5;
-      --text-muted: #888;
-      --accent: #6d5acd;
-      --accent-light: #8b7ae0;
+      --text-muted: #999;
+      --blue: #4a90d9;
+      --purple: #9b6dff;
+      --lime: #a3e635;
+      --accent: var(--purple);
+      --accent-light: var(--lime);
     }
 
     body {
@@ -31,7 +34,7 @@
     }
 
     a { color: var(--accent-light); text-decoration: none; transition: color 0.2s; }
-    a:hover { color: #a99af0; }
+    a:hover { color: var(--blue); }
 
     /* Header */
     header {
@@ -49,7 +52,7 @@
       color: var(--text);
     }
 
-    .logo span { color: var(--accent-light); }
+    .logo span { color: var(--lime); }
 
     nav a {
       margin-left: 2rem;
@@ -77,6 +80,10 @@
       letter-spacing: -0.03em;
       line-height: 1.15;
       margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--blue), var(--purple), var(--lime));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero p {
@@ -91,12 +98,14 @@
       align-items: center;
       gap: 0.5rem;
       background: var(--surface);
-      border: 1px solid var(--border);
+      border: 1px solid var(--purple);
       border-radius: 9999px;
       padding: 0.5rem 1.25rem;
       font-size: 0.875rem;
       color: var(--text-muted);
+      transition: border-color 0.2s;
     }
+    .badge:hover { border-color: var(--lime); color: var(--text); }
 
     .badge svg { flex-shrink: 0; }
 
@@ -136,7 +145,7 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--accent-light);
+      color: var(--blue);
       margin-top: 1.25rem;
       margin-bottom: 0.35rem;
     }
@@ -195,7 +204,7 @@
   </section>
 
   <footer>
-    &copy; 2025 TeeBox LLC. All rights reserved.
+    &copy; 2026 TeeBox LLC. All rights reserved.
   </footer>
 
 </body>
